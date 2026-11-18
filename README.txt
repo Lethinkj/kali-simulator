@@ -22,7 +22,7 @@ Type `help` in the terminal for the same list.
 
 ## Other commands
 `ip a`, `ifconfig`, `pwd`, `whoami`, `hostname`, `date`, `uname -a`,
-`ls`, `ls -la`, `help`, `clear`
+`ls`, `ls -la`, `history`, `help`, `clear`
 
 ## Notes
 - Runs entirely in the browser with no installation or server.

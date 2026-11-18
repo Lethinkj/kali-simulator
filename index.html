@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
-<title>kali@kali: ~</title>
+<title>root@kali: ~</title>
 <style>
 *{box-sizing:border-box}
-:root{--term-bg:#0c0c0c;--term-fg:#d8d8d8;--prompt-green:#4ade80;--prompt-blue:#6aa8ff;--dim:#8b949e;--blue:#5b9dff;--yellow:#e3b341;--red:#ff6b6b}
+:root{--term-bg:#0c0c0c;--term-fg:#d8d8d8;--term-green:#5cf37b;--prompt-green:#4ade80;--prompt-red:#f14c4c;--dim:#8b949e;--blue:#5b9dff;--yellow:#e3b341;--red:#ff6b6b}
 html,body{height:100%}
 body{margin:0;overflow:hidden;background:#05060a;color:var(--term-fg);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
 .svg-defs{position:absolute;width:0;height:0;overflow:hidden}
@@ -23,49 +23,46 @@ body{margin:0;overflow:hidden;background:#05060a;color:var(--term-fg);font-famil
 .ws.active{background:#ffffff14;color:#fff}
 .panel-clock{padding:5px 8px;color:#e2e6ec;font-variant-numeric:tabular-nums;white-space:nowrap}
 .workspace{position:relative;flex:1;min-height:0;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:24px;background:radial-gradient(1100px 680px at 78% 16%,rgba(38,99,235,.30),transparent 62%),radial-gradient(900px 680px at 12% 88%,rgba(96,53,225,.20),transparent 60%),linear-gradient(155deg,#070b15 0%,#0b1224 48%,#07080d 100%)}
-.wallpaper-logo{position:absolute;right:-5%;bottom:-16%;width:min(64vw,760px);height:auto;opacity:.10;pointer-events:none;filter:drop-shadow(0 0 90px rgba(59,130,246,.45))}
 .window{position:relative;z-index:2;width:min(100%,1120px);height:min(100%,780px);min-height:0;display:flex;flex-direction:column;background:var(--term-bg);border:1px solid #000;box-shadow:0 25px 80px #000c,0 0 0 1px #ffffff0b;overflow:hidden}
-.titlebar{flex:0 0 32px;height:32px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(#2b3039,#20242b);border-bottom:1px solid #0a0c0f;color:#e3e7ed;font-size:12.5px;line-height:1;user-select:none}
-.title-left{display:flex;align-items:center;gap:8px;min-width:0;padding-left:10px}
-.window-icon{width:16px;height:16px;flex:0 0 16px;display:block}
-.window-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}
-.window-controls{display:flex;align-self:stretch}
-.wc{width:40px;display:grid;place-items:center;color:#cbd2dc;font-size:14px;line-height:1}
-.wc:hover{background:#ffffff14}
-.wc.close:hover{background:#d64545;color:#fff}
+.titlebar{position:relative;flex:0 0 34px;height:34px;display:flex;align-items:center;justify-content:center;background:linear-gradient(#2c3037,#20242a);border-bottom:1px solid #0a0c0f;color:#e9ecf1;font-size:13px;line-height:1;user-select:none}
+.window-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500;padding:0 110px}
+.window-controls{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:8px}
+.wc{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#3b4048;color:#e5e8ed;font-size:12px;line-height:1;border:1px solid #11151a}
+.wc:hover{background:#4a505a}
+.wc.close:hover{background:#d64545;border-color:#d64545;color:#fff}
 .menubar{flex:0 0 26px;height:26px;display:flex;align-items:center;gap:1px;padding:0 6px;background:#1a1e24;border-bottom:1px solid #0e1014;color:#cbd2dc;font-size:12.5px;line-height:1;user-select:none}
 .menu-item{padding:5px 8px;border-radius:3px}
 .menu-item:hover{background:#ffffff12;color:#fff}
-.tabbar{flex:0 0 30px;height:30px;display:flex;align-items:flex-end;gap:4px;background:#12151a;border-bottom:1px solid #000;padding:0 6px;font-size:12px;line-height:1;user-select:none}
-.tab{display:flex;align-items:center;gap:10px;height:26px;padding:0 10px;background:#0c0c0c;color:#dfe4ea;border:1px solid #2b3038;border-bottom:0;border-radius:4px 4px 0 0}
-.tab-close{color:#8d96a3;font-size:15px;line-height:1}
-.tab-new{align-self:center;color:#8d96a3;font-size:16px;margin-left:4px}
-.screen{position:relative;flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;padding:10px 12px 18px;background:var(--term-bg);color:var(--term-fg);font-family:"DejaVu Sans Mono","Liberation Mono","Noto Sans Mono",Consolas,monospace;font-size:14px;line-height:1.5;overflow-wrap:anywhere;scrollbar-width:thin;scrollbar-color:#3b414a transparent;cursor:text}
-.screen::-webkit-scrollbar{width:10px}
-.screen::-webkit-scrollbar-track{background:transparent}
-.screen::-webkit-scrollbar-thumb{background:#3b414a;border:2px solid #0c0c0c;border-radius:6px}
-.output{white-space:pre-wrap;overflow-wrap:anywhere}
-.p-top,.p-bottom{color:var(--prompt-green)}
-.p-user,.p-dir{color:var(--prompt-blue)}
-.promptline{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-rows:auto auto;align-items:baseline;white-space:pre;margin:0;padding:0}
-.promptline .p-top{grid-column:1/-1;grid-row:1}
-.promptline .p-bottom{grid-column:1;grid-row:2}
-.promptline .command{grid-column:2;grid-row:2}
-.command{width:100%;min-width:0;padding:0 0 0 .6ch;margin:0;border:0;outline:0;background:transparent;color:#f0f0f0;font:inherit;line-height:inherit;caret-color:#f0f0f0}
-.cmd{color:#f0f0f0}
+.terminal-body{position:relative;flex:1;min-height:0;overflow:hidden;background:var(--term-bg)}
+.terminal-dragon{position:absolute;z-index:0;left:50%;top:50%;right:auto;transform:translate(-50%,-50%);width:min(62%,640px);height:auto;color:#fff;opacity:.22;pointer-events:none}
+.screen{position:absolute;inset:0;z-index:1;overflow-y:scroll;overflow-x:hidden;padding:12px 14px 20px;background:transparent;color:var(--term-fg);font-family:"DejaVu Sans Mono","Liberation Mono","Noto Sans Mono",Consolas,monospace;font-size:14px;line-height:1.5;overflow-wrap:anywhere;scrollbar-width:thin;scrollbar-color:#9aa1aa #171a1e;cursor:text}
+.screen::-webkit-scrollbar{width:12px}
+.screen::-webkit-scrollbar-track{background:#171a1e}
+.screen::-webkit-scrollbar-thumb{background:#9aa1aa;border:2px solid #171a1e;border-radius:0}
+.output{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--term-green)}
+.output .green,.output .blue,.output .yellow,.output .danger,.output .dim{color:var(--term-green)}
+.prompt{white-space:pre}
+.prompt-user{color:#f4f4f4}
+.prompt-hash{color:var(--prompt-red)}
+.promptline{display:flex;align-items:baseline;white-space:pre;margin:0;padding:0}
+.command{flex:1;width:100%;min-width:0;padding:0;margin:0;border:0;outline:0;background:transparent;color:var(--term-green);font:inherit;line-height:inherit;caret-color:var(--term-green)}
+.cmd{color:var(--term-green)}
 .green{color:var(--prompt-green)}
 .blue{color:var(--blue)}
 .yellow{color:var(--yellow)}
 .danger{color:var(--red)}
 .dim{color:var(--dim)}
 @media(max-width:700px){
-  .panel,.wallpaper-logo,.menubar,.tabbar{display:none}
+  .panel,.menubar{display:none}
   .workspace{padding:0;background:#000}
   .window{width:100%;height:100dvh;max-height:none;border:0;box-shadow:none}
-  .titlebar{flex-basis:29px;height:29px}
-  .screen{padding:8px 8px 14px;font-size:13px}
+  .titlebar{flex-basis:32px;height:32px}
+  .window-title{padding:0 88px;font-size:12.5px}
+  .window-controls{right:9px;gap:6px}
+  .wc{width:20px;height:20px;font-size:11px}
+  .terminal-dragon{width:88%;opacity:.18}
+  .screen{padding:10px 8px 16px;font-size:13px;overflow-y:auto}
   .command{font-size:16px}
-  .wc{width:34px}
 }
 </style>
 </head>
@@ -83,27 +80,23 @@ body{margin:0;overflow:hidden;background:#05060a;color:var(--term-fg);font-famil
     <div class="panel-right"><span class="panel-clock" id="panel-clock"></span></div>
   </header>
   <div class="workspace">
-    <svg class="wallpaper-logo" viewBox="0 0 512 512" aria-hidden="true"><use href="#kali-logo"></use></svg>
     <main class="window" aria-label="Terminal">
       <div class="titlebar" aria-hidden="true">
-        <div class="title-left">
-          <svg class="window-icon" viewBox="0 0 512 512"><use href="#kali-logo"></use></svg>
-          <span class="window-title">kali@kali: ~</span>
-        </div>
+        <span class="window-title">root@kali: ~</span>
         <div class="window-controls"><span class="wc">&#x2212;</span><span class="wc">&#x25A1;</span><span class="wc close">&times;</span></div>
       </div>
       <nav class="menubar" aria-hidden="true">
-        <span class="menu-item">File</span><span class="menu-item">Edit</span><span class="menu-item">View</span><span class="menu-item">Bookmarks</span><span class="menu-item">Tools</span><span class="menu-item">Help</span>
+        <span class="menu-item">File</span><span class="menu-item">Edit</span><span class="menu-item">View</span><span class="menu-item">Search</span><span class="menu-item">Terminal</span><span class="menu-item">Help</span>
       </nav>
-      <div class="tabbar" aria-hidden="true">
-        <div class="tab">kali@kali: ~ <span class="tab-close">&times;</span></div><span class="tab-new">+</span>
+      <div class="terminal-body">
+        <svg class="terminal-dragon" viewBox="-2 125 410 304" aria-hidden="true"><g fill="currentColor" transform="translate(2.0107)"><path d="m69.929 127.71c-29.464.0337-48.949 2.4206-48.949 2.4206s107.73-5.1706 194.03 29.769c2.9338 13.122 11.759 34.976 16.513 45.481-13.602 9.4041-28.94 18.249-31.328 49.612-2.3877 31.362 24.576 58.947 58.013 59.798 31.751 1.6913 53.688 1.9323 80.277 15.718 25.38 14.034 46.192 56.794 48.251 95.252 2.2244-28.534-8.4845-89.895-58.453-108.53 69.826 12.219 75.982 63.973 75.984 63.994 0 0 5.2056-59.754-88.677-73.531-11.899-1.7458-26.947-3.0899-42.168-3.1283-75.246.99487-77.989-86.786-21.288-91.218 23.499-1.9389 51.556 10.738 78.986 23.512-.10182 3.4068.0405 6.4339 2.2787 9.2314 2.2375 2.7966 10.832 5.8474 13.579 7.4233 2.7464 1.5764 11.545 7.1715 16.937 14.189 1.1692-2.1872 10.933-8.5432 10.933-8.5432s-2.3391.0507-7.781-1.9832c-5.4426-2.0339-11.9-8.1876-12.053-8.5432-.15246-.35625-.25501-.91601 1.0169-1.1705.96572-.81305-1.2209-3.4575-2.1873-4.4232-.96572-.96636-7.4247-11.95-7.5769-12.204-.15245-.25447-.20376-.50931-.66105-.81465-1.4244-.45805-7.6799.66106-7.6799.66106s-9.6211-4.7252-12.937-14.913c.0482 1.7844-1.6497 3.734 0 7.8335-5.0162-2.122-9.325-5.7416-12.723-14.685-2.0227 5.0868 0 8.3215 0 8.3215s-11.811-3.3016-13.701-14.195c-2.0742 4.8902 0 7.8316 0 7.8316s-19.258-10.048-51.255-10.194c-21.422-1.965-25.882-39.65-23.897-45.994 0 0-30.899-16.285-91.723-23.479-22.809-2.6982-44.081-3.5238-61.76-3.5036zm71.276 32.521c-9.2697.0699-19.22.41577-29.674 1.1588-55.751 3.9628-112.04 23.477-112.04 23.477s115.18-28.98 211.77-11.971h.002l-2.512-8.1057s-27.374-4.862-67.542-4.5594zm68.293 17.263c-9.75-.0412-40.02 1.1848-85.564 15.436-57.124 17.874-89.522 43.21-89.522 43.21s85.141-47.539 181.24-50.24l-2.7492-8.3176s-1.1564-.0779-3.4064-.0875zm62.559-.13932c26.38 10.723 49.34 24.931 67.165 44.514l.002.002 4.2794-.27998s-24.518-29.746-71.447-44.236zm72.712 57.183 5.2496 3.8672c.65793-1.1408 3.31 6.0651 4.9229 8.0668.0683.3997-2.6812 3.6124-3.6164 3.42-.0787-.41087-4.3494-1.6449-4.3494-1.6449s-4.853-2.932-5.5451-3.8847c-.6926-.9527 3.0007-9.1925 3.3383-9.8244z" stroke="currentColor" stroke-linejoin="round" stroke-width="2.9864"/><path d="m69.929 127.71c-29.464.0337-48.949 2.4206-48.949 2.4206s107.73-5.1706 194.03 29.769c2.9338 13.122 11.759 34.976 16.513 45.481-13.602 9.4041-28.94 18.249-31.328 49.612-2.3877 31.362 24.576 58.947 58.013 59.798 31.751 1.6913 53.688 1.9323 80.277 15.718 25.38 14.034 46.192 56.794 48.251 95.252 2.2244-28.534-8.4845-89.895-58.453-108.53 69.826 12.219 75.982 63.973 75.984 63.994 0 0 5.2056-59.754-88.677-73.531-11.899-1.7458-26.947-3.0899-42.168-3.1283-75.246.99487-77.989-86.786-21.288-91.218 23.499-1.9389 51.556 10.738 78.986 23.512-.10182 3.4068.0404 6.4339 2.2787 9.2314 2.2375 2.7966 10.832 5.8474 13.579 7.4233 2.7464 1.5764 11.545 7.1715 16.937 14.189 1.1692-2.1872 10.933-8.5432 10.933-8.5432s-2.3391.0507-7.781-1.9832c-5.4426-2.0339-11.9-8.1876-12.053-8.5432-.15246-.35625-.25501-.91601 1.0169-1.1705.96572-.81305-1.2209-3.4575-2.1873-4.4232-.96572-.96636-7.4247-11.95-7.5769-12.204-.15245-.25447-.20376-.50931-.66105-.81465-1.4244-.45805-7.6799.66106-7.6799.66106s-9.6211-4.7252-12.937-14.913c.0482 1.7844-1.6497 3.734 0 7.8335-5.0162-2.122-9.325-5.7416-12.723-14.685-2.0227 5.0868 0 8.3215 0 8.3215s-11.811-3.3016-13.701-14.195c-2.0742 4.8902 0 7.8316 0 7.8316s-19.258-10.048-51.255-10.194c-21.422-1.965-25.882-39.65-23.897-45.994 0 0-30.899-16.285-91.723-23.479-22.809-2.6982-44.081-3.5238-61.76-3.5036zm71.276 32.521c-9.2697.0699-19.22.41577-29.674 1.1588-55.751 3.9628-112.04 23.477-112.04 23.477s115.18-28.98 211.77-11.971h.002l-2.512-8.1057s-27.373-4.5594-67.542-4.5594zm68.293 17.263c-9.75-.0412-40.02 1.1848-85.564 15.436-57.124 17.874-89.522 43.21-89.522 43.21s85.141-47.539 181.24-50.24l-2.7492-8.3176s-1.1564-.0779-3.4064-.0875zm62.559-.13932c26.38 10.723 49.34 24.931 67.165 44.514l.002.002 4.2794-.27998s-24.518-29.746-71.446-44.236zm74.662 61.731c.85796.17286 2.4779 3.3567 3.9644 5.6306.13054.18477.26356.38112.38886.53662.002.0138.003.0234.006.037.16796.23967.33693.4887.49774.68826.0812.47558.21641.76558-.89631.53663-.0936-.48886-.25471-.62995-.25471-.62995s-2.686-1.5982-3.5094-2.7317c-.82408-1.1335-.96948-3.1153-.56774-3.8672.0978-.16967.2236-.23004.37137-.20027z"/></g></svg>
+        <section id="screen" class="screen" aria-label="Terminal session">
+          <div id="output" class="output" role="log" aria-live="polite"></div>
+          <form id="command-form" class="promptline">
+            <span class="prompt" aria-hidden="true"><span class="prompt-user">root@kali:~</span><span class="prompt-hash"># </span></span><input id="command" class="command" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" autofocus aria-label="Terminal command">
+          </form>
+        </section>
       </div>
-      <section id="screen" class="screen" aria-label="Terminal session">
-        <div id="output" class="output" role="log" aria-live="polite"></div>
-        <form id="command-form" class="promptline">
-          <span class="p-top" aria-hidden="true">┌──(<span class="p-user">kali㉿kali</span>)-[<span class="p-dir">~</span>]</span><span class="p-bottom" aria-hidden="true">└─$</span><input id="command" class="command" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" autofocus aria-label="Terminal command">
-        </form>
-      </section>
     </main>
   </div>
 </div>
@@ -138,8 +131,7 @@ body{margin:0;overflow:hidden;background:#05060a;color:var(--term-fg);font-famil
     return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
   };
 
-  const promptTop = `<span class="p-top">┌──(<span class="p-user">kali㉿kali</span>)-[<span class="p-dir">~</span>]</span>`;
-  const promptEcho = command => `${promptTop}<br><span class="p-bottom">└─$</span> <span class="cmd">${escapeHTML(command)}</span>`;
+  const promptEcho = command => `<span class="prompt"><span class="prompt-user">root@kali:~</span><span class="prompt-hash"># </span></span><span class="cmd">${escapeHTML(command)}</span>`;
 
   const commands = {
     'ip addr': () => lines(
@@ -167,8 +159,8 @@ body{margin:0;overflow:hidden;background:#05060a;color:var(--term-fg);font-famil
       '        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;'
     ),
 
-    'pwd': () => '/home/kali',
-    'whoami': () => 'kali',
+    'pwd': () => '/root',
+    'whoami': () => 'root',
     'hostname': () => 'kali',
     'date': () => dateString(),
     'uname -a': () => 'Linux kali 6.12.0-kali-amd64 #1 SMP PREEMPT_DYNAMIC x86_64 GNU/Linux',
@@ -177,19 +169,19 @@ body{margin:0;overflow:hidden;background:#05060a;color:var(--term-fg);font-famil
 
     'ls -la': () => lines(
       'total 44',
-      'drwxr-xr-x 10 kali kali 4096 Nov 18 14:00 .',
+      'drwx------ 10 root root 4096 Nov 18 14:00 .',
       'drwxr-xr-x  3 root root 4096 Nov 18 10:00 ..',
-      '-rw-r--r--  1 kali kali  220 Nov 18 10:00 .bash_logout',
-      '-rw-r--r--  1 kali kali 3771 Nov 18 10:00 .bashrc',
-      'drwxr-xr-x  2 kali kali 4096 Nov 18 10:00 Desktop',
-      'drwxr-xr-x  2 kali kali 4096 Nov 18 10:00 Documents',
-      'drwxr-xr-x  2 kali kali 4096 Nov 18 10:00 Downloads',
-      blue('drwxr-xr-x 12 kali kali 4096 Nov 18 14:00 juice-shop'),
-      'drwxr-xr-x  2 kali kali 4096 Nov 18 10:00 Music',
-      'drwxr-xr-x  2 kali kali 4096 Nov 18 10:00 Pictures',
-      'drwxr-xr-x  2 kali kali 4096 Nov 18 10:00 Public',
-      'drwxr-xr-x  2 kali kali 4096 Nov 18 10:00 Templates',
-      'drwxr-xr-x  2 kali kali 4096 Nov 18 10:00 Videos'
+      '-rw-r--r--  1 root root  220 Nov 18 10:00 .bash_logout',
+      '-rw-r--r--  1 root root 3771 Nov 18 10:00 .bashrc',
+      'drwxr-xr-x  2 root root 4096 Nov 18 10:00 Desktop',
+      'drwxr-xr-x  2 root root 4096 Nov 18 10:00 Documents',
+      'drwxr-xr-x  2 root root 4096 Nov 18 10:00 Downloads',
+      blue('drwxr-xr-x 12 root root 4096 Nov 18 14:00 juice-shop'),
+      'drwxr-xr-x  2 root root 4096 Nov 18 10:00 Music',
+      'drwxr-xr-x  2 root root 4096 Nov 18 10:00 Pictures',
+      'drwxr-xr-x  2 root root 4096 Nov 18 10:00 Public',
+      'drwxr-xr-x  2 root root 4096 Nov 18 10:00 Templates',
+      'drwxr-xr-x  2 root root 4096 Nov 18 10:00 Videos'
     ),
 
     'nmap 127.0.0.1': () => lines(
@@ -314,7 +306,7 @@ body{margin:0;overflow:hidden;background:#05060a;color:var(--term-fg);font-famil
       '  6. zap',
       '  7. report',
       '',
-      dim('Other: ip a | ifconfig | pwd | whoami | hostname | date | uname -a | ls | ls -la | clear'),
+      dim('Other: ip a | ifconfig | pwd | whoami | hostname | date | uname -a | ls | ls -la | history | clear'),
       dim('History: Up/Down arrows')
     )
   };
@@ -346,6 +338,14 @@ body{margin:0;overflow:hidden;background:#05060a;color:var(--term-fg);font-famil
     if (!command) return;
     const key = command.replace(/\s+/g, ' ');
 
+    if (key === 'history') {
+      const list = history.map((item, index) => `${String(index + 1).padStart(4, ' ')}  ${escapeHTML(item)}`).join('<br>');
+      print(command, list);
+      history.push(command);
+      historyIndex = history.length;
+      return;
+    }
+
     history.push(command);
     historyIndex = history.length;
 
@@ -359,7 +359,7 @@ body{margin:0;overflow:hidden;background:#05060a;color:var(--term-fg);font-famil
       return;
     }
 
-    print(command, `zsh: command not found: ${escapeHTML(command.split(/\s+/)[0])}`);
+    print(command, `bash: ${escapeHTML(command.split(/\s+/)[0])}: command not found`);
   };
 
   const submitCommand = () => {
